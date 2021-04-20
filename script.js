@@ -127,6 +127,7 @@ recipeApp.getRecipe = (ingredient) => {
 };
 
 recipeApp.displayRecipe = (menu) => {
+    const recipeSection = document.querySelector('.recipe-section')
     const recipeName = document.querySelector('.recipe-label');
     const recipeImage = document.getElementById('recipe-image');
     const ingredientContainer = document.querySelector('.recipe');
@@ -138,6 +139,8 @@ recipeApp.displayRecipe = (menu) => {
 
     const healthLabels = menu.healthLabels;
     imageContainer.style.visibility = "visible";
+
+    recipeSection.style.visibility = "visible";
 
     recipeName.textContent = '';
     recipeImage.src = '';
@@ -181,7 +184,7 @@ recipeApp.displayRecipe = (menu) => {
         const ingredUl = document.createElement('ul')
         const ingredList = document.createElement('li');
         ingredList.textContent = ingred;
-        ingredList.innerHTML = `<i class="fas fa-dot-circle"></i>${ingred}`;
+        ingredList.innerHTML = ingred;
         ingredUl.appendChild(ingredList);
         ingredientContainer.appendChild(ingredUl);
     })

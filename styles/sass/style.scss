@@ -25,6 +25,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+ul {
+    list-style: none;
+}
+
 .wrapper {
     width: 90%;
     max-width: 1300px;
@@ -127,10 +131,26 @@ main {
 }
 
 .recipe-section {
-    width: auto;
-    height: auto;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-   background-color: rgba(240, 89, 69, 0.8);
+//    background-color: rgba(240, 89, 69, 0.8);
+    background-color: rgba(163, 210, 202, 0.7);
+    display: flex;
+    justify-content: center;
+
+   .fridge {
+       background-color: rgba(240, 89, 69, 0.8);
+       width: 50%;
+       height: auto;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   
 }
 
 footer {

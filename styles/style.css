@@ -271,6 +271,10 @@ h2 {
   margin-bottom: 10px;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1300px;
@@ -416,10 +420,36 @@ main .list-container ul li {
 }
 
 .recipe-section {
-  width: auto;
-  height: auto;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  background-color: rgba(163, 210, 202, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recipe-section .fridge {
   background-color: rgba(240, 89, 69, 0.8);
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
