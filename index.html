@@ -15,7 +15,8 @@
     <header>
         <div class="header wrapper">
             <h1>RANDOM RECIPE</h1>
-            <p>You don't know what to cook today? We can help!</p>
+            <p>Trying to clear out your fridge? Tell us what's in it and we'll help you make sure it doesn't go to waste!
+            </p>
         </div>
         
     </header>
@@ -23,33 +24,38 @@
         <form action="">
             <label for="input"><h2>ADD YOUR INGREDIENTS HERE</h2></label>
             <div class="input-container">
-                <input type="text" placeholder="i.e. Egg">
-                <button class="add-botton"><i class="far fa-plus-square"></i></button>
+                <input id="ingredient" type="text" placeholder="  e.g. Eggs">
+                <button class="add-button"><i class="far fa-plus-square"></i></button>
             </div>
         </form>
         <div class="list-container">
-            <ul>
-                <li>Eggs</li>
-                <li>Cabbage</li>
-                <li>Lemon</li>
-                <li>Eggs</li>
-                <li>Cabbage</li>
-                <li>Lemon</li>
-                <li>Eggs</li>
-                <li>Cabbage</li>
-                <li>Lemon</li><li>Eggs</li>
-                <li>Cabbage</li>
-                <li>Lemon</li>
-                <li>Cabbage</li>
-                <li>Lemon</li>
-                <li>Eggs</li>
-                <li>Cabbage</li>
-                <li>Lemon</li>
-                <li>Eggs</li>
+            <ul id="storage">
+                
                 <p>*click to remove the ingedient</p>
             </ul>
+            <button id="reset">Clear All</button>
         </div>
+      
+        <button class="submit-button" id>Get Recipe</button>
+
+        <section class="recipe-section">
+            <div class="fridge">
+                <div class="recipe-title">
+                    <!-- showing recipe and shopping list -->
+                    <div class="recipe-label-and-image">
+                        <h2 class="recipe-label"></h2>
+                        <div class="image-container">
+                            <img class="recipe-image" id="recipe-image" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="nutrition"></div>
+                </div>
+                <div class="recipe"></div>
+                <div class="recipe-link"></div>
+            </div>
+        </section>
     </main>
     <footer><p>Jess & Jake</p></footer>
+    <script src="./script.js"></script>
 </body>
 </html>

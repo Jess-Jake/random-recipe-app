@@ -263,6 +263,7 @@ h1 {
 
 h1 {
   font-size: 40px;
+  text-align: center;
 }
 
 h2 {
@@ -273,6 +274,10 @@ h2 {
 .wrapper {
   width: 90%;
   max-width: 1300px;
+}
+
+.hide {
+  visibility: hidden;
 }
 
 header {
@@ -292,6 +297,10 @@ header {
   width: 100%;
   color: white;
   background-color: #5eaaa8;
+}
+
+header p {
+  text-align: center;
 }
 
 main {
@@ -314,6 +323,8 @@ main {
 }
 
 main form {
+  -webkit-transition: visibility 0s ease-in-out 1000ms;
+  transition: visibility 0s ease-in-out 1000ms;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,6 +367,7 @@ main form .input-container {
 main form .input-container input {
   width: 70%;
   height: 30px;
+  border: none;
 }
 
 main form .input-container button {
@@ -378,6 +390,8 @@ main form .input-container button {
 }
 
 main .list-container {
+  -webkit-transition: visibility 0s ease-in-out 1000ms;
+  transition: visibility 0s ease-in-out 1000ms;
   background-color: white;
   color: black;
   width: 600px;
@@ -397,13 +411,20 @@ main .list-container ul {
 
 main .list-container ul li {
   background-color: white;
-  border: 2px solid black;
   padding: 5px;
   margin: 5px;
+}
+
+.recipe-section {
+  width: auto;
+  height: auto;
+  position: absolute;
+  background-color: rgba(240, 89, 69, 0.8);
 }
 
 footer {
   width: 100%;
   color: white;
   background-color: #a3d2ca;
+  text-align: center;
 }

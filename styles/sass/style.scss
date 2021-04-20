@@ -17,6 +17,7 @@ h1 {
 
 h1 {
     font-size: 40px;
+    text-align: center;
 }
 
 h2 {
@@ -29,6 +30,10 @@ h2 {
     max-width: 1300px;
 }
 
+.hide {
+    visibility: hidden;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -37,6 +42,9 @@ header {
     width: 100%;
     color: white;
     background-color: #5eaaa8;
+    p {
+        text-align: center;
+    }
 }
 
 main {
@@ -46,8 +54,9 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    
     form {
+        transition: visibility 0s ease-in-out 1000ms;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -73,6 +82,7 @@ main {
             input {
                 width: 70%;
                 height: 30px;
+                border: none;
             }
 
             button {
@@ -92,6 +102,7 @@ main {
     }  
     
     .list-container {
+        transition: visibility 0s ease-in-out 1000ms;
         background-color: white;
         color: black;
         width: 600px;
@@ -106,7 +117,7 @@ main {
 
             li {
                 background-color: white;
-                border: 2px solid black;
+                // border: 2px solid black;
                 //border-radius: 5px;
                 padding: 5px;
                 margin: 5px;
@@ -115,8 +126,16 @@ main {
     }
 }
 
+.recipe-section {
+    width: auto;
+    height: auto;
+    position: absolute;
+   background-color: rgba(240, 89, 69, 0.8);
+}
+
 footer {
     width: 100%;
     color: white;
     background-color: #a3d2ca;
+    text-align: center;
 }
