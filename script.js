@@ -73,9 +73,6 @@ recipeApp.submitButton = () => {
         recipeImage.src = '';
         recipeImage.alt = '';
         ingredientUl.innerHTML = '';
-        
-        formEl.classList.add('hide')
-        ulEl.classList.add('hide');
 
         const ingredList = document.querySelectorAll('li');
         const randomNumber = Math.floor(Math.random() * ingredList.length);
