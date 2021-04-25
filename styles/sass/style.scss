@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 body {
     display: grid;
     grid-template-rows: 150px 1fr 40px;
@@ -126,8 +131,6 @@ main {
 
             li {
                 background-color: white;
-                // border: 2px solid black;
-                //border-radius: 5px;
                 padding: 5px;
                 margin: 5px;
             }
@@ -172,18 +175,20 @@ main {
     display: flex;
     justify-content: center;
     color: white;
-    overflow-y: scroll;
+    
 
    .fridge {
        position: relative;
        background-color: rgba(240, 89, 69, 0.8);
-       width: 50%;
+       width: 600px;
        height: auto;
        display: flex;
        justify-content: space-around;
        flex-direction: column;
        align-items: center;
        padding: 10px;
+       overflow-y: scroll;
+       
    }
 
    .recipe-title {

@@ -248,6 +248,13 @@ template {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
 body {
   display: -ms-grid;
   display: grid;
@@ -466,13 +473,12 @@ main .submit-button:hover, main .submit-button:focus {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  overflow-y: scroll;
 }
 
 .recipe-section .fridge {
   position: relative;
   background-color: rgba(240, 89, 69, 0.8);
-  width: 50%;
+  width: 600px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,6 +493,7 @@ main .submit-button:hover, main .submit-button:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .recipe-section .recipe-title {
