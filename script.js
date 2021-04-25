@@ -46,7 +46,6 @@ recipeApp.addIngred = () => {
         const storageList = document.createElement("li");
         storageList.className = "storage-list";
         storageList.innerHTML = ingredients.value;
-        console.log(storageList)
 
         if (ingredients.value) {
             storage.prepend(storageList);
@@ -70,7 +69,6 @@ recipeApp.submitButton = () => {
 
     submitButton.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log('clicked')
         recipeName.textContent = '';
         recipeImage.src = '';
         recipeImage.alt = '';
@@ -82,7 +80,6 @@ recipeApp.submitButton = () => {
         const ingredList = document.querySelectorAll('li');
         const randomNumber = Math.floor(Math.random() * ingredList.length);
         if (ingredList[randomNumber]) {
-            console.log((ingredList[randomNumber]).textContent)
             recipeApp.getRecipe((ingredList[randomNumber]).textContent);
         } else {
             alert("please tell us what is in your fridge");
@@ -95,7 +92,6 @@ recipeApp.submitButton = () => {
 //create a method which requests informtion from the API
 recipeApp.getRecipe = (ingredient) => {
     //use URL constructor to specify the parameters we wish to include in our API endpoint
-    console.log(ingredient)
     const url = new URL(recipeApp.apiUrl);
     url.search = new URLSearchParams({
         q: ingredient,
@@ -128,6 +124,7 @@ recipeApp.getRecipe = (ingredient) => {
 
 recipeApp.displayRecipe = (menu) => {
     const recipeSection = document.querySelector('.recipe-section')
+    const fridge = document.querySelector('.fridge')
     const recipeName = document.querySelector('.recipe-label');
     const recipeImage = document.getElementById('recipe-image');
     const ingredientContainer = document.querySelector('.recipe');
@@ -192,7 +189,15 @@ recipeApp.displayRecipe = (menu) => {
     const link = document.createElement('button');
     link.innerHTML = `<a href="${menu.url}">Go to Recipe</a>`;
 
+    const closeBtn = document.createElement('div');
+    closeBtn.innerHTML = `<button class="closeBtn">X</button>`;
     recipeLinkButton.appendChild(link);
+    fridge.appendChild(closeBtn);
+
+    //close recipe container
+    closeBtn.addEventListener('click', () => {
+        location.reload();
+    })
 };
 
 recipeApp.setLocalStorage = () => {
