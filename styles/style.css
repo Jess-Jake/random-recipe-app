@@ -466,6 +466,7 @@ main .submit-button:hover, main .submit-button:focus {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
+  overflow-y: scroll;
 }
 
 .recipe-section .fridge {
