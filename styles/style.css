@@ -273,6 +273,12 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 650px) {
+  h1 {
+    font-size: 20px;
+  }
+}
+
 h2 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -356,6 +362,18 @@ main form {
   margin-bottom: 20px;
 }
 
+@media (max-width: 650px) {
+  main form {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  main form {
+    width: 250px;
+  }
+}
+
 main form label {
   justify-self: flex-start;
   font-size: 30px;
@@ -416,6 +434,18 @@ main .list-container {
   background-color: rgba(163, 210, 202, 0.8);
 }
 
+@media (max-width: 650px) {
+  main .list-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  main .list-container {
+    width: 250px;
+  }
+}
+
 main .list-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,6 +490,18 @@ main .submit-button:hover, main .submit-button:focus {
   opacity: 0.7;
 }
 
+@media (max-width: 650px) {
+  main .submit-button {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  main .submit-button {
+    width: 250px;
+  }
+}
+
 .recipe-section {
   visibility: hidden;
   width: 100%;
@@ -483,8 +525,9 @@ main .submit-button:hover, main .submit-button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -494,6 +537,18 @@ main .submit-button:hover, main .submit-button:focus {
           align-items: center;
   padding: 10px;
   overflow-y: scroll;
+}
+
+@media (max-width: 650px) {
+  .recipe-section .fridge {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  .recipe-section .fridge {
+    width: 250px;
+  }
 }
 
 .recipe-section .recipe-title {
@@ -522,10 +577,20 @@ main .submit-button:hover, main .submit-button:focus {
   width: 200px;
 }
 
+@media (max-width: 650px) {
+  .recipe-section .recipe-image {
+    width: 100px;
+  }
+}
+
 .recipe-section .recipe {
   width: 90%;
   padding: 5px 0;
   border: 2px solid white;
+}
+
+.recipe-section .recipe li {
+  margin: 7.5px 0;
 }
 
 .recipe-section .recipe-link {
@@ -535,7 +600,7 @@ main .submit-button:hover, main .submit-button:focus {
 .recipe-section button {
   width: 100%;
   height: 30px;
-  background-color: rgba(163, 210, 202, 0.7);
+  background-color: #5eaaa8;
   color: white;
   border: 2px solid white;
 }

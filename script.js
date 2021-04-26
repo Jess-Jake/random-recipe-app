@@ -193,7 +193,8 @@ recipeApp.displayRecipe = (menu) => {
 
     //close recipe container
     closeBtn.addEventListener('click', () => {
-        location.reload();
+        imageContainer.style.visibility = "hidden";
+        recipeSection.style.visibility = "hidden";
     })
 };
 

@@ -1,0 +1,11 @@
+@mixin mobileMQ {
+  @media (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin smallMobileMQ {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
