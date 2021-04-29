@@ -321,8 +321,8 @@ header p {
 }
 
 main {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.1))), center/cover no-repeat url(../assets/kitchen1.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), center/cover no-repeat url(../assets/kitchen1.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.1))), center/cover no-repeat url(../assets/kitchen.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), center/cover no-repeat url(../assets/kitchen.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
