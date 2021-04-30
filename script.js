@@ -160,7 +160,7 @@ recipeApp.displayRecipe = (menu) => {
     // recipeImage.alt = '';
     // recipeLinkButton.innerHTML = '';
     // ingredientUl.innerHTML = '';
-    // health.innerHTML = '';
+    health.innerHTML = '';
     // category.innerHTML = '';
     // categoryCuisineType.innerHTML = '';
     // categoryDietType.innerHTML = '';
