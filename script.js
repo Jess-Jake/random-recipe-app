@@ -127,51 +127,78 @@ recipeApp.displayRecipe = (menu) => {
     const ingredientContainer = document.querySelector('.recipe');
     const imageContainer = document.querySelector('.image-container');
     const recipeLinkButton = document.querySelector('.recipe-link');
-    const ingredientUl = document.querySelector('.recipe');
-    const nutritionUl = document.createElement('ul');
-    const nutrition = document.querySelector('.nutrition');
+    const healthUl = document.createElement('ul');
+    const categoryCuisineType = document.querySelector('.category-cuisine-type');
+    const categoryDietType = document.querySelector('.category-diet-type');
+    const nutritionDetail = document.querySelector('.nutrition-detail');
+    const health = document.querySelector('.health');
+    let cuisineType = "N/A";
+    let dietLabels = "";
 
+    if (menu.cuisineType) {
+        const cuisineTypeFirstLetter = menu.cuisineType[0];
+        cuisineType = cuisineTypeFirstLetter.charAt(0).toUpperCase() + cuisineTypeFirstLetter.slice(1);
+    }
+
+    if (menu.dietLabels.length !== 0) {
+        dietLabels = `, ${menu.dietLabels[0]}`;
+    } 
+    const calories = menu.calories.toFixed(0);
+    const totalWeight = menu.totalWeight.toFixed(0);
+    const carb = menu.totalNutrients.CHOCDF.quantity.toFixed(0);
+    const protein = menu.totalNutrients.PROCNT.quantity.toFixed(0);
+    const fat = menu.totalNutrients.FAT.quantity.toFixed(0);
     const healthLabels = menu.healthLabels;
+
+   
+
     imageContainer.style.visibility = "visible";
-
     recipeSection.style.visibility = "visible";
-
-    recipeName.textContent = '';
-    recipeImage.src = '';
-    recipeImage.alt = '';
     recipeLinkButton.innerHTML = '';
-    ingredientUl.innerHTML = '';
-    nutrition.innerHTML = '';
+    // recipeName.textContent = '';
+    // recipeImage.src = '';
+    // recipeImage.alt = '';
+    // recipeLinkButton.innerHTML = '';
+    // ingredientUl.innerHTML = '';
+    // health.innerHTML = '';
+    // category.innerHTML = '';
+    // categoryCuisineType.innerHTML = '';
+    // categoryDietType.innerHTML = '';
+    // nutrition.innerHTML = '';
+    // nutritionDetail.innerHTML = '';
 
     recipeName.textContent = menu.label;
     recipeImage.src = menu.image;
     recipeImage.alt = menu.label;
+    categoryCuisineType.innerHTML = cuisineType;
+    categoryDietType.innerHTML = dietLabels;
+    nutritionDetail.innerHTML = `Total: ${totalWeight}g, Calories: ${calories}kcal, Carb: ${carb}g, Protein: ${protein}g, Fat: ${fat}g`
 
     if (healthLabels.includes('Peanut-Free')) {
         const peanutFreeList = document.createElement('li');
-        peanutFreeList.innerHTML = '<i class="fas fa-smile-wink"><span>Peanut-Free</span></i>';
-        nutritionUl.appendChild(peanutFreeList);
+        peanutFreeList.innerHTML = '<div><span>Peanut-Free</span></div>';
+        healthUl.appendChild(peanutFreeList);
     }
 
     if (healthLabels.includes('Vegan')) {
         const veganList = document.createElement('li');
-        veganList.innerHTML = '<i class="fas fa-leaf"><span>Vegan</span></i>'
-        nutritionUl.appendChild(veganList);
+        veganList.innerHTML = '<div><span>Vegan</span></div>'
+        healthUl.appendChild(veganList);
     }
 
     if (healthLabels.includes('Vegetarian')) {
         const vegetarianList = document.createElement('li');
-        vegetarianList.innerHTML = '<i class="fas fa-circle"><span>Vegetarian</span></i>'
-        nutritionUl.appendChild(vegetarianList);
+        vegetarianList.innerHTML = '<div><span>Vegetarian</span></div>'
+        healthUl.appendChild(vegetarianList);
     }
 
     if (healthLabels.includes('Alcohol-Free')) {
         const alcoholFreeList = document.createElement('li');
-        alcoholFreeList.innerHTML = '<i class="fas fa-ban"><span>Alcohol-Free</span></i>'
-        nutritionUl.appendChild(alcoholFreeList);
+        alcoholFreeList.innerHTML = '<div><span>Alcohol-Free</span></div>'
+        healthUl.appendChild(alcoholFreeList);
     }
 
-    nutrition.appendChild(nutritionUl);
+    health.appendChild(healthUl);
 
 
     menu.ingredientLines.forEach(ingred => {

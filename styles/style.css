@@ -248,13 +248,6 @@ template {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  /* Remove scrollbar space */
-  background: transparent;
-  /* Optional: just make scrollbar invisible */
-}
-
 body {
   display: -ms-grid;
   display: grid;
@@ -264,7 +257,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Proza Libre', sans-serif;
 }
 
@@ -503,25 +496,27 @@ main .submit-button:hover, main .submit-button:focus {
 }
 
 .recipe-section {
-  visibility: hidden;
-  width: 100%;
-  height: 75%;
   position: absolute;
-  background-color: rgba(163, 210, 202, 0.7);
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(163, 210, 202, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: black;
 }
 
 .recipe-section .fridge {
   position: relative;
-  background-color: rgba(240, 89, 69, 0.8);
+  background-color: white;
   width: 600px;
-  height: auto;
+  height: 90%;
+  top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -537,7 +532,6 @@ main .submit-button:hover, main .submit-button:focus {
           align-items: center;
   padding: 10px;
   overflow-y: scroll;
-  scrollbar-width: none;
 }
 
 @media (max-width: 650px) {
@@ -552,21 +546,41 @@ main .submit-button:hover, main .submit-button:focus {
   }
 }
 
+.recipe-section .fridge h3 {
+  width: 90%;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-top: 2px solid #cac9c9;
+  border-bottom: 2px solid #cac9c9;
+}
+
 .recipe-section .recipe-title {
   width: 90%;
-  border: 2px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.recipe-section .recipe-title > div {
-  margin: 10px;
+.recipe-section .recipe-title h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+  .recipe-section .recipe-title h2 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
 }
 
 .recipe-section .recipe-title ul {
@@ -574,20 +588,92 @@ main .submit-button:hover, main .submit-button:focus {
   padding: 0;
 }
 
-.recipe-section .recipe-image {
+.recipe-section .recipe-image-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 20px 0;
+}
+
+@media (max-width: 650px) {
+  .recipe-section .recipe-image-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.recipe-section .recipe-image-info .image-container .recipe-image {
   width: 200px;
 }
 
 @media (max-width: 650px) {
-  .recipe-section .recipe-image {
-    width: 100px;
+  .recipe-section .recipe-image-info .image-container {
+    margin-bottom: 10px;
   }
+}
+
+.recipe-section .recipe-image-info h3 {
+  width: 100%;
+}
+
+.recipe-section .recipe-image-info .recipe-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(90% - 200px);
+}
+
+@media (max-width: 650px) {
+  .recipe-section .recipe-image-info .recipe-info {
+    width: 100%;
+  }
+}
+
+.recipe-section .recipe-image-info .recipe-info div {
+  margin: 5px 0;
+}
+
+.recipe-section .recipe-image-info .health {
+  font-size: 10px;
+}
+
+.recipe-section .recipe-image-info .health ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recipe-section .recipe-image-info .health div {
+  border: 1.5px solid black;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 3px;
 }
 
 .recipe-section .recipe {
   width: 90%;
   padding: 5px 0;
-  border: 2px solid white;
+}
+
+.recipe-section .recipe ul {
+  list-style: square;
 }
 
 .recipe-section .recipe li {
@@ -604,7 +690,7 @@ main .submit-button:hover, main .submit-button:focus {
   justify-self: flex-end;
   background-color: #5eaaa8;
   color: white;
-  border: 2px solid white;
+  border: none;
 }
 
 .recipe-section button:hover, .recipe-section button:focus {
