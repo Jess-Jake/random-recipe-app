@@ -74,10 +74,11 @@ recipeApp.submitButton = () => {
         recipeImage.alt = '';
         ingredientUl.innerHTML = '';
 
-        const ingredList = document.querySelectorAll('li');
+        const ingredList = document.querySelectorAll('.storage-list');
+        
         const randomNumber = Math.floor(Math.random() * ingredList.length);
-        if (ingredList[randomNumber]) {
-            recipeApp.getRecipe((ingredList[randomNumber]).textContent);
+        if (ingredList.length > 0) {
+            recipeApp.getRecipe((ingredList[randomNumber]).innerText);
         } else {
             alert("please tell us what is in your fridge");
             const ingredients = document.querySelector("#ingredient");
@@ -199,7 +200,6 @@ recipeApp.displayRecipe = (menu) => {
     }
 
     health.appendChild(healthUl);
-
 
     menu.ingredientLines.forEach(ingred => {
         const ingredUl = document.createElement('ul')
