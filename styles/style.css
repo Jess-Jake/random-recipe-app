@@ -514,7 +514,7 @@ main .submit-button:hover, main .submit-button:focus {
 .recipe-section .fridge {
   position: relative;
   background-color: white;
-  width: 600px;
+  width: 650px;
   height: 90%;
   top: 5%;
   display: -webkit-box;
