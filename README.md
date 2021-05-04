@@ -5,16 +5,18 @@
 <br/>
 
 <h2>About</h2>
-Single page web application built with vanilla JS, SASS, and RESTful API
+Single page web application built with vanilla JS, SASS, and RESTful API.<br/>
+LIVE DEMO :https://random-recipe-jj.netlify.app/
+<br/>
 
 <h2>Purpose</h2>
-
 This application will provide a container where user can save lists of ingredients they have, and It will recomment a recipe randomly based on what user can cook with.
+<br/>
 
 <h2>Key feature</h2>
-
 - Main Page 
 - Recipe display
+<br/>
 
 <h2>Main Page </h2>
 <img src="./assets/landing-page.png">
@@ -33,6 +35,7 @@ This application will provide a container where user can save lists of ingredien
 <li> Food alert / diet info</li>
 <li> Name and quatity of ingredients user need to cook the menu</li>
 </ul>
+<br/>
 <h2>Features to be added in the future</h2>
 <p>A function that allows users share their ingredients with other people.</p>
 <p>People who have right ingredients can gather and cook some foods together.</p>
