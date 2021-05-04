@@ -1,4 +1,4 @@
-<div align="center"><img src="./assets/random-recipe.png"></div>
+<div align="center"><img src="./assets/random-recipe.png" style="width:300px; height:300px"></div>
 <h1 align="center">Random Recipe</h1>
 <p align="center"><strong>Let me know what you have in your fridge, We will find some recipe for you.</strong>
 </p>
