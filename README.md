@@ -23,14 +23,14 @@ This application will provide a container where user can save lists of ingredien
 
 <h2>Main Page </h2>
 <img src="./assets/landing-page.png">
-<p>Users can type their ingredients in input box to save them into the container below.</p>
-<p>The container shows what users typed as their resouces to cook</p>
-<p>'Clear All' button: It will clear all the ingredients in the container.</p>
-<p>'Random Recipe' button: It will display recipe display pop up page.</p>
+<p>1. Users can type their ingredients in input box to save them into the container below.</p>
+<p>2. The container shows what users typed as their resouces to cook.</p>
+<p>3. 'Clear All' button: It will clear all the ingredients in the container.</p>
+<p>4. 'Random Recipe' button: It will display recipe display pop up page.</p>
 
 <h2>Results Page </h2>
 <img src="./assets/display-page.png">
-<p>Displat pop up will show users information like below </p>
+<p>Display-page will show users information like below </p>
 <ul>
 <li> Menu name</li>
 <li> Category of the dish</li>
