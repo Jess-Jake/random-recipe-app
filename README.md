@@ -26,12 +26,13 @@ This application will provide a container where user can save lists of ingredien
 <h2>Results Page </h2>
 <img src="./assets/display-page.png">
 <p>Displat pop up will show users information like below </p>
-- Menu name
-- Category of the dish
-- Nutritions
-- Food alert / diet info
-- Name and quatity of ingredients user need to cook the menu
-
+<ul>
+<li> Menu name</li>
+<li> Category of the dish</li>
+<li> Nutritions</li>
+<li> Food alert / diet info</li>
+<li> Name and quatity of ingredients user need to cook the menu</li>
+</ul>
 <h2>Features to be added in the future</h2>
 <p>A function that allows users share their ingredients with other people.</p>
 <p>People who have right ingredients can gather and cook some foods together.</p>
