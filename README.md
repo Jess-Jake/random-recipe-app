@@ -14,8 +14,11 @@ This application will provide a container where user can save lists of ingredien
 <br/>
 
 <h2>Key feature</h2>
-- Main Page 
-- Recipe display
+<ul>
+<li>Main Page</li>
+<li>Recipe display</li>
+</ul>
+
 <br/>
 
 <h2>Main Page </h2>
@@ -39,3 +42,6 @@ This application will provide a container where user can save lists of ingredien
 <h2>Features to be added in the future</h2>
 <p>A function that allows users share their ingredients with other people.</p>
 <p>People who have right ingredients can gather and cook some foods together.</p>
+
+<h2>Copyright</h2>
+This project is licensed under the terms of the MIT license and protected by Udacity Honor Code and Community Code of Conduct. See <a href="LICENSE.md">license</a> and <a href="LICENSE.DISCLAIMER.md">disclaimer</a>
