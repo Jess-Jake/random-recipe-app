@@ -10,7 +10,7 @@ LIVE DEMO :https://random-recipe-jj.netlify.app/
 <br/>
 
 <h2>Purpose</h2>
-This application will provide a container where user can save lists of ingredients they have, and It will recomment a recipe randomly based on what user can cook with.
+This application  allows users to save a list of ingredients they have in the fridge or pantry and we’ll recommend a recipe based on what they have.
 <br/>
 
 <h2>Key feature</h2>
@@ -24,7 +24,7 @@ This application will provide a container where user can save lists of ingredien
 <h2>Main Page </h2>
 <img src="./assets/landing-page.png">
 <p>1. Users can type their ingredients in input box to save them into the container below.</p>
-<p>2. The container shows what users typed as their resouces to cook.</p>
+<p>2. The container shows what users typed as their resources to cook with.</p>
 <p>3. 'Clear All' button: It will clear all the ingredients in the container.</p>
 <p>4. 'Random Recipe' button: It will display recipe display pop up page.</p>
 
@@ -32,16 +32,16 @@ This application will provide a container where user can save lists of ingredien
 <img src="./assets/display-page.png">
 <p>Display-page will show users information like below </p>
 <ul>
-<li> Menu name</li>
+<li> Recipe name</li>
 <li> Category of the dish</li>
-<li> Nutritions</li>
+<li> Nutrition info</li>
 <li> Food alert / diet info</li>
 <li> Name and quatity of ingredients user need to cook the menu</li>
 </ul>
 <br/>
 <h2>Features to be added in the future</h2>
 <p>A function that allows users share their ingredients with other people.</p>
-<p>People who have right ingredients can gather and cook some foods together.</p>
+<p>People who have right ingredients can gather and cook together.</p>
 
 <h2>Copyright</h2>
 This project is licensed under the terms of the MIT license and protected by Udacity Honor Code and Community Code of Conduct. See <a href="LICENSE.md">license</a> and <a href="LICENSE.DISCLAIMER.md">disclaimer</a>
