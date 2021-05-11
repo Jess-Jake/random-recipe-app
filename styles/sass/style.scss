@@ -217,6 +217,9 @@ main {
        padding: 10px;
        overflow-y:auto;
         border-radius: 10px;
+        -moz-box-shadow: 2px 2px 2px 2px black;
+        -webkit-box-shadow: 2px 2px 2px 2px black;
+        box-shadow: 2px 2px 2px 2px black;
 
        @include mobileMQ {
             width: 350px;
