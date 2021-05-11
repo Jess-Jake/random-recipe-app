@@ -75,6 +75,7 @@ main {
         width: 600px;
         height: 100px;
         margin-bottom: 20px;
+        border-radius: 10px;
 
         @include mobileMQ {
             width: 350px;
@@ -130,6 +131,7 @@ main {
         width: 600px;
         height: auto;
         background-color: rgba(163, 210, 202, 0.8);
+        border-radius: 10px;
 
         @include mobileMQ {
             width: 350px;
@@ -174,6 +176,7 @@ main {
         color: white;
         border: 2px solid white;
         margin: 5px;  
+        border-radius: 10px;
         
          &:hover, &:focus {
             cursor: pointer;
@@ -212,7 +215,8 @@ main {
        flex-direction: column;
        align-items: center;
        padding: 10px;
-       overflow-y: scroll;
+       overflow-y:auto;
+        border-radius: 10px;
 
        @include mobileMQ {
             width: 350px;

@@ -353,6 +353,7 @@ main form {
   width: 600px;
   height: 100px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 @media (max-width: 650px) {
@@ -425,6 +426,7 @@ main .list-container {
   width: 600px;
   height: auto;
   background-color: rgba(163, 210, 202, 0.8);
+  border-radius: 10px;
 }
 
 @media (max-width: 650px) {
@@ -476,6 +478,7 @@ main .submit-button {
   color: white;
   border: 2px solid white;
   margin: 5px;
+  border-radius: 10px;
 }
 
 main .submit-button:hover, main .submit-button:focus {
@@ -531,7 +534,8 @@ main .submit-button:hover, main .submit-button:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  border-radius: 10px;
 }
 
 @media (max-width: 650px) {
